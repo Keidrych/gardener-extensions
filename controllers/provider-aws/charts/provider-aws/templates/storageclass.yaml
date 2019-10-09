@@ -7,6 +7,7 @@ metadata:
 {{ include "labels" . | indent 4 }}
 provisioner: kubernetes.io/aws-ebs
 allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer
 parameters:
   type: gp2
 {{- end }}
